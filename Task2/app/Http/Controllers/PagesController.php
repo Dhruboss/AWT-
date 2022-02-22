@@ -43,4 +43,12 @@ class PagesController extends Controller
 
         return "sented";
     }
+    public function studentDash(){
+        return view('pages.student.studentDash');
+
+    }
+    public function adminDash(){
+        return view('pages.admin.adminDash');
+
+    }
 }

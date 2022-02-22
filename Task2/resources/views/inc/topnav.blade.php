@@ -23,12 +23,17 @@
           <a class="nav-link" href="{{route('contactus')}}">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('studentLogin')}}">Login</a>
+          <a class="nav-link" href="{{route('login')}}">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{route('studentCreate')}}">Registration</a>
         </li>
-
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('studentList')}}">List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{route('adminList')}}">Admin List</a>
+        </li>
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
