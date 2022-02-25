@@ -22,9 +22,11 @@ Route::post('/contactus', [PagesController::class, 'contactusSubmitted'])->name(
 //Route::get('/studentLogin', [StudentController::class, 'studentLogin'])->name('studentLogin');
 //Route::post('/studentLogin', [StudentController::class, 'studentLoginsubmitted'])->name('studentLogin');
 Route::get('/studentProfile', [StudentController::class, 'studentProfile'])->name('studentProfile');
+//Route::get('/profile', [editController::class, 'editProfile'])->name('editprofile')->middleware('ValidUser');
+//Route::post('/profile', [editController::class, 'updateData'])->name('editprofile')->middleware('ValidUser');
 Route::get('/studentCreate', [StudentController::class, 'studentCreate'])->name('studentCreate');
 Route::post('/studentCreate', [StudentController::class, 'studentCreatesubmitted'])->name('studentCreate');
-Route::get('/studentList', [StudentController::class, 'studentList'])->name('studentList')->middleware('ValidStudent');
+Route::get('/studentList', [StudentController::class, 'studentList'])->name('studentList')->middleware('ValidStudent') ->middleware('ValidAdmin');
 Route::get('/studentEdit/{id}/{name}',[StudentController::class,'studentEdit']);
 Route::post('/studentEdit',[StudentController::class,'studentEditSubmitted'])->name('studentEdit');
 Route::get('/studentDelete/{id}/{name}',[StudentController::class,'studentDelete']);

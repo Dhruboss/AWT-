@@ -99,15 +99,16 @@ class LoginController extends Controller
         // return $teacher;
         if($student){
             $request->session()->put('user',$student->name);
-            return redirect()->route('studentDash');
+            return view('pages.student.studentDash')->with('student', $student);;
         }
+
         $admin = admin::where('phone',$request->phone)
         ->where('password',$request->password)
         ->first();
 
 // return $teacher;
         if($admin){
-        $request->session()->put('user',$admin->name);
+        $request->session()->put('admin',$admin->name);
         return redirect()->route('adminDash');
         }
         return back();

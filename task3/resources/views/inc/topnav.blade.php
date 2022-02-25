@@ -23,7 +23,7 @@
           <a class="nav-link" href="{{route('contactus')}}">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{route('studentProfile')}}">Student Profile</a>
+          <a class="nav-link" href="{{route('studentProfile')}}">Profile</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{route('login')}}">Login</a>

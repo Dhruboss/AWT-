@@ -16,7 +16,7 @@ class ValidAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if($request->session()->get('user')){
+        if($request->session()->get('admin')){
             return $next($request);
         }
         return redirect()->route('login');
