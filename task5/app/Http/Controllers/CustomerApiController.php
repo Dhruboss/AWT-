@@ -17,6 +17,6 @@ class CustomerApiController extends Controller
         $user->save();
 
         
-        return response()->json('Insert');
+        return response()->json('Inserted');
     }
 }
