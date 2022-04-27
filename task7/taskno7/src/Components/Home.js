@@ -6,7 +6,7 @@ const Home = () => {
             
             <div>
                 <Head/>
-                <h1>Welcome to The Breakfast Club</h1>
+                <h1>Welcome to THE BREAKFAST CLUB</h1>
             </div>
     )
 }
